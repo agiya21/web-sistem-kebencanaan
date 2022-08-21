@@ -17,7 +17,7 @@ class SikdeliserdangController extends Controller
     {
         $dataBencana = sikdeliserdang::all();
         return Inertia::render('Homepage', [
-            'title' => 'Web Sistem Kebencanaan Deli Serdang',
+            'title' => 'Sistem Informasi Kebencanaan Deli Serdang',
             'description' => 'Selamat Datang di Sistem Informasi Kebencanaan Deli Serdang',
             'databencana' => $dataBencana,
         ]);
