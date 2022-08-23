@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SikdeliserdangController;
+use Composer\InstalledVersions;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,6 +22,12 @@ Route::get('/', [SikdeliserdangController::class, 'index']);
     //     'title' => 'Web Sistem Kebencanaan Deli Serdang',
     //     'description' => 'Selamat datang di Web Sistem Kebencanaan Deli Serdang',
     // ]);
+
+Route::get('/insertdata', function () {
+    return Inertia::render('InsertData', [
+        'title' => 'Insert Data - Sistem Informasi Kebencanaan Deli Serdang',
+    ]);
+});
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [

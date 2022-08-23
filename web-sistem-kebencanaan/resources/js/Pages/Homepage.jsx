@@ -9,7 +9,7 @@ const Homepage = (props) => {
         <div className='justify-center items-center min-h-screen bg-neutral-800 text-white gap-4'>
             <Head title={props.title} />
             <Navbar />
-            <div className='p-4 m-5 bg-slate-700 rounded-box'> 
+            <div className='p-4 m-5 bg-slate-700 rounded-box'>
                 {/* <h1>{props.description}</h1> */}
                 <DataTable databencana={props.databencana} />
             </div>
