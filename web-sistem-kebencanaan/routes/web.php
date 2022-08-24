@@ -29,6 +29,12 @@ Route::get('/insertdata', function () {
     ]);
 });
 
+Route::get('/loginsistem', function() {
+    return Inertia::render('LoginSistem', [
+        'title' => 'Log In - Sistem Informasi Kebencanaan Deli Serdang',
+    ]);
+});
+
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
 //         'canLogin' => Route::has('login'),

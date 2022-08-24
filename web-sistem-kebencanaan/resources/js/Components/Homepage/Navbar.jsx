@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-200 ">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">Sistem Informasi Kebencanaan Deli Serdang</a>
+                <a className="btn btn-ghost normal-case text-xl" href='/'>Sistem Informasi Kebencanaan Deli Serdang</a>
             </div>
 
             <a className='btn btn-primary' href='/insertdata'>Insert Data</a>

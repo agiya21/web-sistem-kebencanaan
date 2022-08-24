@@ -1,17 +1,19 @@
 import { Head } from "@inertiajs/inertia-react"
 import React from "react"
+import Navbar from "@/Components/Homepage/Navbar"
 
 const InsertData = (props) => {
     return (
         <div>
+            <Navbar />
             <Head title={props.title} />
             <h1 className="py-5 text-center text-4xl font-bold">Insert Data Kebencanaan</h1>
             <div className="rounded-box bg-base-300 lg:px-40 lg:py-5 lg:mx-64">
                 <form>
                     <div className='flex flex-col py-4 ml-5'>
                         Jenis Bencana:
-                        <div>
-                            <select id="bencana" className='rounded-xl py-1 text-black'>
+                        <div className="pb-3">
+                            <select id="bencana" className='select select-bordered rounded-xl py-1'>
                                 <option value="banjir">Banjir</option>
                                 <option value="kebakaran">Kebakaran</option>
                                 <option value="angin_puting_beliung">Angin Puting Beliung</option>
@@ -21,14 +23,14 @@ const InsertData = (props) => {
                             </select>
                         </div>
                         Waktu Kejadian:
-                        <div className="py-2 text-black">
+                        <div className="pt-1 pb-3 text-black">
                             <input type='datetime-local' className="rounded-xl py-1" />
                         </div>
                         Lokasi:
                         <br />
                         Kecamatan:
-                        <div>
-                            <select id="kecamatan" className='rounded-xl py-1 text-black'>
+                        <div className="pb-3">
+                            <select id="kecamatan" className='select select-bordered rounded-xl py-1'>
                                 <option value="kec1">Kec 1</option>
                                 <option value="kec2">Kec 2</option>
                                 <option value="kec3">Kec 3</option>
@@ -36,8 +38,8 @@ const InsertData = (props) => {
                         </div>
                         Desa/Kelurahan:
                         {/** Ini tampilinnya berdasarkan pilihan Kecamatan */}
-                        <div>
-                            <select id="deskel" className='rounded-xl py-1 text-black'>
+                        <div className="pb-3">
+                            <select id="deskel" className='select select-bordered rounded-xl py-1'>
                                 <option value="des1">Des 1</option>
                                 <option value="des2">Des 2</option>
                                 <option value="kel1">Kel 3</option>
@@ -45,21 +47,22 @@ const InsertData = (props) => {
                         </div>
                         Dusun/Lingkungan:
                         {/** Ini tampilinnya berdasarkan pilihan desa/kelurahan */}
-                        <div>
-                            <select id="dusling" className='rounded-xl py-1 text-black'>
+                        <div className="pb-3">
+                            <select id="dusling" className='select select-bordered rounded-xl py-1'>
                                 <option value="dus1">Dus 1</option>
                                 <option value="dus2">Dus 2</option>
                                 <option value="ling1">Ling 1</option>
                             </select>
                         </div>
-                        Alamat:
-                        <div class="form-control py-2">
-                            <textarea class="textarea textarea-bordered h-24 w-1/2" placeholder="Alamat lengkap"></textarea>
+                        <div class="form-control pt-1 pb-3">
+                            Alamat:
+                            <textarea 
+                                class="textarea textarea-bordered h-24 w-1/2" 
+                                placeholder="Masukkan alamat lengkap" />
                         </div>
-
                         Fasilitas:
-                        <div>
-                            <select id="fasilitas" className='rounded-xl py-1 text-black'>
+                        <div className="pt-1 pb-3">
+                            <select id="fasilitas" className='select select-bordered rounded-xl py-1'>
                                 <option value="rumah_ibadah">Rumah Ibadah</option>
                                 <option value="rumah_tempat_tinggal">Rumah Tempat Tinggal</option>
                                 <option value="sekolah">Sekolah</option>
@@ -87,8 +90,8 @@ const InsertData = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <select id="tingkat-kerusakan" className='rounded-xl py-1 text-black'>
+                        <div className="pt-1 pb-3">
+                            <select id="tingkat-kerusakan" className='select select-bordered rounded-xl py-1'>
                                 <option value="ringan">Ringan</option>
                                 <option value="sedang">Sedang</option>
                                 <option value="berat">Berat</option>
